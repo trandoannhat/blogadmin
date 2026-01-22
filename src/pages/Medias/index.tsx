@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Row, Col, Button, Upload, message, Spin, Empty } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import MediaService from "./MediaService";

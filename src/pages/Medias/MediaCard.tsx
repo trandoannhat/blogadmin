@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Image, Button, Popconfirm, Tooltip } from "antd";
+import { Card, Image, Popconfirm, Tooltip } from "antd";
 import { DeleteOutlined, CopyOutlined } from "@ant-design/icons";
 
 interface MediaCardProps {
