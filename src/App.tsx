@@ -6,11 +6,16 @@ import { PostForm } from "./pages/posts/PostForm";
 import { Login } from "./pages/auth/Login";
 import { Toaster } from "react-hot-toast";
 import { CategoryPage } from "./pages/categories";
+import MediasPage from "./pages/Medias";
+import { useEffect } from "react";
 
 function App() {
   const token = localStorage.getItem("token");
   const location = useLocation();
 
+  useEffect(() => {
+    console.log("🚀 URL hiện tại đã đổi thành:", location.pathname);
+  }, [location]);
   // 1. Rào chắn Login
   if (!token && location.pathname !== "/login") {
     return <Navigate to="/login" replace />;
@@ -39,6 +44,9 @@ function App() {
         <Route path="/posts" element={<PostList />} />
         <Route path="/posts/create" element={<PostForm />} />
         <Route path="/posts/edit/:id" element={<PostForm />} />
+
+        <Route path="/medias" element={<MediasPage />} />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </AdminLayout>

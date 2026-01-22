@@ -77,7 +77,7 @@ export const Sidebar = () => {
               active={isActive("/categories")}
             />
             <SidebarItem
-              to="/media"
+              to="/medias"
               icon={<ImageIcon size={20} />}
               label="Thư viện ảnh"
               active={isActive("/media")}
